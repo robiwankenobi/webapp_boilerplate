@@ -8,4 +8,10 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
   },
   moduleFileExtensions: ['js', 'ts', 'tsx'],
+  collectCoverageFrom: ['**/src/app/**/*.ts', '**/src/app/**/*.tsx'],
+  coveragePathIgnorePatterns: ['.*/__tests__/.*'],
+  watchPlugins: [
+    'jest-watch-typeahead/filename',
+    'jest-watch-typeahead/testname',
+  ],
 };
