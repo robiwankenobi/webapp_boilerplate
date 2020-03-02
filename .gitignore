@@ -3,3 +3,5 @@ node_modules
 coverage
 cypress/videos
 cypress/screenshots
+
+.DS_Store
