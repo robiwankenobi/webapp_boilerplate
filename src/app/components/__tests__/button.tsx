@@ -7,7 +7,6 @@ test('test default button interaction states', () => {
   const testContent = 'click me';
   const { getByText } = render(<Button>{testContent}</Button>);
   const button = getByText(testContent);
-  expect(button).toBeInTheDocument();
   expect(button).not.toBeDisabled();
   button.click();
   expect(button).toBeDisabled();
@@ -15,9 +14,9 @@ test('test default button interaction states', () => {
 
 test('button snapshot test', () => {
   const testContent = 'click me';
-  const { getByText, debug } = render(<Button>{testContent}</Button>);
+  const { getByText } = render(<Button>{testContent}</Button>);
   // shows rendered html in testing console
-  debug();
+  // debug();
   const button = getByText(testContent);
   expect(button).toMatchInlineSnapshot(`
     <button>
