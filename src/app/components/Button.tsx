@@ -11,11 +11,11 @@ const Button: React.FC<Props> = ({ children }) => {
     setDisabled(true);
   };
 
-  return (
-    <button disabled={disabled} onClick={handleClick}>
+  return children ? (
+    <button role="button" disabled={disabled} onClick={handleClick}>
       {children}
     </button>
-  );
+  ) : null;
 };
 
 export default Button;
