@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
+    "watch": "webpack --watch",
     "postbuild": "cp ./public/index.html ./dist/index.html",
-    "check-types": "tsc --skipLibCheck",
+    "check-types": "tsc --skipLibCheck --noEmit",
     "dev": "webpack-dev-server --mode=development",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|tsx|js|json)\" .",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
@@ -20,7 +21,8 @@
     "test:watch": "jest --watch",
     "setup": "npm install && npm run validate",
     "serve:client": "serve --no-clipboard --single --listen 8080 dist",
-    "validate": "npm-run-all --parallel lint check-types test:coverage build"
+    "validate": "npm-run-all --parallel lint check-types test:coverage build",
+    "tsc": "tsc --skipLibCheck --outDir ./dist"
   },
   "keywords": [],
   "author": "",

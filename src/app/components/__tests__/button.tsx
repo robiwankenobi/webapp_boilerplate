@@ -10,7 +10,7 @@ describe('Button Component', () => {
     // shows rendered html in testing console
     // debug();
     const button = getByText(testContent);
-    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent(testContent);
   });
 
   test('is not rendered without text input', () => {

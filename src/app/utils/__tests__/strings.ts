@@ -1,6 +1,6 @@
 import { uppercase } from '../strings';
 
-describe('String uppercase', () => {
+describe('String: uppercase', () => {
   test('returns valid string in uppercase', () => {
     expect(uppercase('a bcD')).toBe('A BCD');
   });
